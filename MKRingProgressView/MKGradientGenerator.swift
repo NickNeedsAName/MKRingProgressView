@@ -110,6 +110,7 @@ internal final class GradientGenerator {
         let ctx = CGContext(data: &data, width: w, height: h, bitsPerComponent: bitsPerComponent, bytesPerRow: w * bytesPerPixel, space: colorSpace, bitmapInfo: bitmapInfo.rawValue)!
         ctx.interpolationQuality = .none
         ctx.setShouldAntialias(false)
+        print("CTX is: \(ctx)")
         let img = ctx.makeImage()!
         generatedImage = img
         return img
